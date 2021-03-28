@@ -20,25 +20,25 @@ app.use( express.static('public') );
 //     res.send('Home Page');
 // });
 
-app.get('/', (req, res) => {
-    res.render('home', {
-        nombre: 'Sebastian Acuña',
-        titulo: 'Curso de Node'
-    });
-});
+// app.get('/', (req, res) => {
+//     res.render('home', {
+//         nombre: 'Sebastian Acuña',
+//         titulo: 'Curso de Node'
+//     });
+// });
 
-app.get('/generic', (req, res) => {
-    res.render('generic', {
-        nombre: 'Sebastian Acuña',
-        titulo: 'Curso de Node'
-    });
-});
-app.get('/elements', (req, res) => {
-    res.render('elements', {
-        nombre: 'Sebastian Acuña',
-        titulo: 'Curso de Node'
-    });
-});
+// app.get('/generic', (req, res) => {
+//     res.render('generic', {
+//         nombre: 'Sebastian Acuña',
+//         titulo: 'Curso de Node'
+//     });
+// });
+// app.get('/elements', (req, res) => {
+//     res.render('elements', {
+//         nombre: 'Sebastian Acuña',
+//         titulo: 'Curso de Node'
+//     });
+// });
 
 // app.get('/generic', (req, res) => {
 //     res.sendFile(__dirname + '/public/generic.html');
@@ -50,7 +50,7 @@ app.get('/elements', (req, res) => {
 
 app.get('*', (req, res) => {
     // res.send('404 | Page Not Found');
-    res.sendFile(__dirname+'/public/404.html');
+    res.sendFile(__dirname+'/public/index.html');
 });
 
 app.listen(port, () => {
